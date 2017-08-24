@@ -1,0 +1,118 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+
+      
+      <h1> <%= @barber.first_name %> <%= @barber.last_name %> </h1> 
+      <div class="table">
+      <h2> <img src="<%= @barber.image %>" class="img-circle"> </h2> 
+
+      <h2><%= @barber.phone_number %></h2> 
+      </div>
+
+    <div class="well1">
+      <%= form_tag "/appointments", method: "post" do %>
+        <h4>Pick a time:</h4>
+        <div class='input-group date' id='datetimepicker1'>
+            <input type='text' class="form-control" name="datetime">
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+        </div>
+      
+        <h4>Pick a haircut:</h4>
+        <select name="form_haircut_id" id="pad">
+          <% Haircut.all.each do |haircut| %>
+          <option value="<%= haircut.id %>"><%= haircut.name %> Cost <%= number_to_currency(haircut.price)%></option> 
+          <% end %>
+        </select>
+         <br>
+         <br>
+        <input type="hidden" name="form_barber_id" value="<%= @barber.id %>">
+        <input type="submit" value="Submit" id="pad">
+
+      <% end %>
+      </div>
+  
+
+    </div>
+    <div class="col-md-9">
+      <div class ="grid">
+
+            <h1 class="my-4 text-center text-lg-left">Check Out My Work</h1>
+
+            <div class="row text-center text-lg-left">
+
+              <div class="col-lg-3 col-md-4 col-xs-6">
+                <a href="#" class="d-block mb-4 h-100">
+                  <img class="img-fluid img-thumbnail" src="<%= asset_path('haircut10.jpg') %>" alt="">
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-xs-6">
+                <a href="#" class="d-block mb-4 h-100">
+                  <img class="img-fluid img-thumbnail" src="<%= asset_path('haircut10.jpg') %>" alt="">
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-xs-6">
+                <a href="#" class="d-block mb-4 h-100">
+                  <img class="img-fluid img-thumbnail" src="<%= asset_path('haircut10.jpg') %>" alt="">
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-xs-6">
+                <a href="#" class="d-block mb-4 h-100">
+                  <img class="img-fluid img-thumbnail" src="<%= asset_path('haircut10.jpg') %>" alt="">
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-xs-6">
+                <a href="#" class="d-block mb-4 h-100">
+                  <img class="img-fluid img-thumbnail" src="<%= asset_path('haircut10.jpg') %>" alt="">
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-xs-6">
+                <a href="#" class="d-block mb-4 h-100">
+                  <img class="img-fluid img-thumbnail" src="<%= asset_path('haircut10.jpg') %>" alt="">
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-xs-6">
+                <a href="#" class="d-block mb-4 h-100">
+                  <img class="img-fluid img-thumbnail" src="<%= asset_path('haircut10.jpg') %>" alt="">
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-xs-6">
+                <a href="#" class="d-block mb-4 h-100">
+                  <img class="img-fluid img-thumbnail" src="<%= asset_path('haircut10.jpg') %>" alt="">
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-xs-6">
+                <a href="#" class="d-block mb-4 h-100">
+                  <img class="img-fluid img-thumbnail" src="<%= asset_path('haircut10.jpg') %>" alt="">
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-xs-6">
+                <a href="#" class="d-block mb-4 h-100">
+                  <img class="img-fluid img-thumbnail" src="<%= asset_path('haircut10.jpg') %>" alt="">
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-xs-6">
+                <a href="#" class="d-block mb-4 h-100">
+                  <img class="img-fluid img-thumbnail" src="<%= asset_path('haircut10.jpg') %>" alt="">
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-xs-6">
+                <a href="#" class="d-block mb-4 h-100">
+                  <img class="img-fluid img-thumbnail" src="<%= asset_path('haircut10.jpg') %>" alt="">
+                </a>
+              </div>
+            </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Barbershop</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- <link rel="stylesheet" href="bootstrap.css" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="custom.css" type="text/css" /> -->
+  </head>
+
+ 
+   
+  <nav class="navbar navbar-inverse">
+   <div class="container-fluid">
+     <div class="navbar-header">
+        <a class="navbar-brand" href="#">Hair Venue</a>
+     </div>
+
+           
+              <ul class="nav navbar-nav" class="nav nav-tabs">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/haircut">haircuts</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/">Special Deals</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+              </ul>
+            </div>
+          
+   </div>
+   
+  </nav>
+
+              <div id="demo" class="collapse">
+              Today We are Giving Free Hair cuts until 1 pm
+              </div>
+  <body>
+    <%= yield %>
+  </body>
+</html>

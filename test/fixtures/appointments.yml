@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  barber_id: 1
+  time: 2017-08-22 16:04:58
+  haircut_id: 1
+
+two:
+  user_id: 1
+  barber_id: 1
+  time: 2017-08-22 16:04:58
+  haircut_id: 1

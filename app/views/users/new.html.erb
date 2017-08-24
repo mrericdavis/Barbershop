@@ -1,0 +1,23 @@
+<div class="front" class="form-group">
+      <h1><u>Create Your Profile</u></h1>
+      <%= form_tag '/users', method: :post do  %>
+        <div>
+         <u> Name:</u> <input type="text" name="name" class="form-control">
+        </div>
+        <br>
+        <div>
+         <u> Email: </u><input type="email" name="email" class="form-control">
+        </div>
+        <br>
+        <div>
+         <u> Password: </u><input type="password" name="password" class="form-control">
+        </div>
+        <br>
+        <div>
+         <u> Confirm Password:</u> <input type="password" name="password_confirmation" class="form-control">
+        </div>
+        <br>
+        <input type="submit" value="Submit">
+      
+      <% end %>
+</div>      

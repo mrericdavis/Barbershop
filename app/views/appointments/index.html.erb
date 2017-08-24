@@ -1,0 +1,10 @@
+<h1>All Of My Appointments </h1>
+
+<% @appointments.each do |appointment| %>
+   <ol> 
+   <li>Barber: <%= appointment.barber.first_name%> </li> 
+   <li>Customer: <%= appointment.user.name %> </li>
+   <li>Haircut: <%= appointment.haircut.name %> </li>
+   </ol> 
+  <% end %>
+
