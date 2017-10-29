@@ -1,0 +1,17 @@
+<h1 class="text-center" class="new" class="text-underline"> <u> Welcome To The Hair Venue </u> </h1>
+<div class="container">
+  
+<div class="row">
+  <% @barbers.each do |barber| %>
+  <div class="col-md-4">
+    <div class="well">
+      <ul id="">
+       <h2><li class="bold"> <u> <%=  barber.first_name %> <%=  barber.last_name %> </u> </li> </h2>
+    
+      </ul>
+      <a href="/barbers/<%= barber.id%>"><img src="<%=  barber.image %>" class="img" class="img-circle"></a>
+    </div>
+  </div>
+ <% end %>   
+</div>
+</div> 

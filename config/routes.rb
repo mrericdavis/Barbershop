@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
+
+  resources :charges
+
   get "/appointments" => "appointments#index"
   get "/appointments/new" => "appointments#new"
   post "/appointments" => "appointments#create"
   get "/appointments/:id" => "appointments#show"
 
 
-  get "/" => "barbers#index"
+  get "/" => "barbers#home"
   get "/barbers" => "barbers#index"
   get "/barbers/new" => "barbers#new"
   post "/barbers" => "barbers#create"

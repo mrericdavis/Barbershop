@@ -1,10 +1,23 @@
-<h1>All Of My Appointments </h1>
-
-<% @appointments.each do |appointment| %>
-   <ol> 
-   <li>Barber: <%= appointment.barber.first_name%> </li> 
-   <li>Customer: <%= appointment.user.name %> </li>
-   <li>Haircut: <%= appointment.haircut.name %> </li>
-   </ol> 
-  <% end %>
-
+<h1 class="well" style="color:black; text-align: center;"> <strong>All Appointments Coming To The Shop</strong> </h1>
+<table style="width:100%; color: black; background-color: grey; font-weight: bold; opacity: 0.9;">
+  <thead class="well">
+    <tr>
+      <th>Barber</th>
+      <th>Customer</th>
+      <th>Haircut Type</th>
+      <th>Haircut Price</th>
+      <th>Date / Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @appointments.each do |appointment| %>     
+       <tr> 
+         <td> <u> Barber: <%= appointment.barber.first_name%> </u></td> 
+         <td> <u> Customer: <%= appointment.user.name %> </u></td> 
+         <td>  Haircut: <%= appointment.haircut.name %> </td> 
+         <td>  <%= appointment.haircut.price %> </td> 
+         <td> <u> Appointment: <%= appointment.new_time%> </u></td>
+       </tr>    
+    <% end %>
+  </tbody>
+</table>  

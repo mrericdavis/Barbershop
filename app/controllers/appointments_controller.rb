@@ -2,16 +2,20 @@ class AppointmentsController < ApplicationController
   def index
     @appointments = Appointment.all
     @barber = Barber.all
+    render "index.html.erb"
   end
 
   def show
-    @appointment = Appointment.find_by(id: params[:id])
+    @barber = Barber.find_by(id: params[:id])
+    @appointment = Appointment.all
+    render "show.html.erb"
   end
 
   def new
   end
 
   def create
+    @haircutprice = Haircut.find_by(id: params[:form_haircut_id])
     appointment = Appointment.new(
      haircut_id: params[:form_haircut_id],
      barber_id: params[:form_barber_id],
@@ -19,6 +23,6 @@ class AppointmentsController < ApplicationController
      user_id: current_user.id
       )
     appointment.save
-    redirect_to "/"
+    render "/charges/new" 
   end
 end

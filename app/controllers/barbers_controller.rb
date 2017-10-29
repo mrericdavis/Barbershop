@@ -1,6 +1,12 @@
 class BarbersController < ApplicationController
-  def index
+  def home
     @barbers = Barber.all
+    render "home.html.erb"
+  end  
+
+  def index
+    @appointment = Appointment.find_by(id: params[:id])
+    @barber = Barber.all
     render "index.html.erb"
   end  
 
