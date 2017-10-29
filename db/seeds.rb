@@ -22,3 +22,6 @@ Appointment.create(time: Time.zone.local(2017, 8, 29, 21), haircut_id: 3, user_i
 Appointment.create(time: Time.zone.local(2017, 8, 29, 21), haircut_id: 3, user_id: 3, barber_id: 3)
 Appointment.create(time: Time.zone.local(2017, 8, 29, 21), haircut_id: 3, user_id: 2, barber_id: 1)
 
+Barber.create(first_name: "Teddy", last_name: "Brown B", phone_number: "312-956-0949", image: "https://hairstyleonpoint.com/wp-content/uploads/2016/12/Short-Mens-Hairstyles-Classic-")
+Barber.create(first_name: "John", last_name: "Gotti B", phone_number: "312-343-9076", image: "https://hairstyleonpoint.com/wp-content/uploads/2016/12/Short-Mens-Hairstyles-Classic-")
+Barber.create(first_name: "Robert", last_name: "Taylor B", phone_number: "773-739-1257", image: "https://hairstyleonpoint.com/wp-content/uploads/2016/12/Short-Mens-Hairstyles-Classic-Crew-300x300.jpg")
